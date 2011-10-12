@@ -1,0 +1,7 @@
+{
+	"name": "explicitLangRegion",
+	"json": {
+		"@set(currentLocaleId)": "es-es",
+		"@i18n(Greetings)": null
+	}
+}

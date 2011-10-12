@@ -1,0 +1,8 @@
+{
+	"name": "testReplacements",
+	"json": {
+		"@i18n(ChannelNotFound)": {
+			"name": "News"
+		}
+	}
+}

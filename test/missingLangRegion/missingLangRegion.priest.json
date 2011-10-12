@@ -1,0 +1,7 @@
+{
+	"name": "missingLangRegion",
+	"json": {
+		"@set(currentLocaleId)": "es-ve",
+		"@i18n(Greetings)": null
+	}
+}

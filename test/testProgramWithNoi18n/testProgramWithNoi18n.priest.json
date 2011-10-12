@@ -1,0 +1,6 @@
+{
+	"name": "testProgramWithNoi18n",
+	"json": {
+		"@i18n(SuccessMessage)": null
+	}
+}

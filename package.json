@@ -1,0 +1,25 @@
+{
+    "name": "priest-i18n",
+    "description": "Localization expressions for priest.js",
+    "version": "1.0.0",
+    "author": "Johan Hernandez <johan@firebase.co>",
+    "main": "index",
+    "repository":
+    {
+        "type": "git"
+        ,
+        "url": "http://github.com/firebaseco/priest-i18n.git"
+    },
+    "bugs": {
+        "web": "https://github.com/firebaseco/priest-i18n/issues"
+    },
+    "keywords": ["priest", "priest.js", "localization", "i18n", "internationalization", "localization","locale", "multi-language", "languages"],
+    "repository": "git://github.com/firebaseco/priest-i18n",
+    "devDependencies": {
+        "vows": ">= 0.5.11"
+    },
+    "engines": {
+        "node": ">= 0.1.98"
+		"priest": ">= 1.0.0"
+    }
+}

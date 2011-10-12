@@ -1,0 +1,6 @@
+{
+	"name": "testFromModule",
+	"json": {
+		"@i18n(sampleModule1.ErrorMessage)": null
+	}
+}
