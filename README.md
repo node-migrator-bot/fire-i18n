@@ -91,7 +91,7 @@ Custom expressions written in Javascript can also take advantage of i18n by call
 
 Example:
 
-    var i18n = require('i18n')
+    var i18n = require('priest-i18n')
 	var priest = require('priest')
     function SampleExpression1() {
 	
