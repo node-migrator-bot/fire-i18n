@@ -92,7 +92,10 @@ vows.describe('i18n - Module Resources').addBatch({
 			if(stderr) console.log(stderr)
 			assert.isEmpty(stderr)
 			assert.isEmpty(stderr, "The priest command should not write any error")
-			assert.equal(stdout, JSON.stringify("Error Message from Sample Module"))
+			assert.equal(stdout, JSON.stringify({
+				"moduleMessage": "Error Message from Sample Module",
+				"expressionMessage": "Error Message from Sample Expression number 422"
+			}))
 		}
 	}
 }).export(module);

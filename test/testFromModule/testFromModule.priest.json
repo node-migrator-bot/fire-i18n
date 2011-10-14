@@ -1,6 +1,11 @@
 {
 	"name": "testFromModule",
 	"json": {
-		"@i18n(sampleModule1.ErrorMessage)": null
+		"moduleMessage": {
+			"@i18n(sampleModule1.ErrorMessage)": null
+		},
+		"expressionMessage": {
+			"@sampleExpression1": null
+		}
 	}
 }
