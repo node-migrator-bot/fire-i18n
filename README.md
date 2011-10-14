@@ -12,7 +12,7 @@ Internationalization module for [priest.js](https://github.com/firebaseco/priest
 ### using Github(unstable)
 In the root of your project run:
 
-    git clone git://github.com/firebaseco/priest.git node_modules/priest-i18n
+    git clone git://github.com/firebaseco/priest-i18n.git node_modules/priest-i18n
 
 ## Working with i18n
 
@@ -71,7 +71,7 @@ Example:
 
 If you have a program in the following path `./MyApp.priest.json` i18n will try load all the `i18n.json` files from `./i18n/`.
 
-## Implement i18n resources in a custom module
+## Implementing i18n resources in a custom module
 
 Implementing i18n resources in a module works the same way than applications, except for a simple call you have to make in your main script:
 
@@ -84,6 +84,28 @@ When you call `enableModule` i18n will load all the resources for your module us
 * A module defined as `./MyModule.js` will load resources from `./i18n/`
 * A module defined as `./node_modules/MyModule.js` will load resources from `./node_modules/i18n/`
 * A module defined as `./node_modules/MyModule/index.js` will load resources from `./node_modules/MyModule/i18n/`
+
+### Custom Expressions
+
+Custom expressions written in Javascript can also take advantage of i18n by calling `enableExpression`, example:
+
+Example:
+
+    var i18n = require('i18n')
+	var priest = require('priest')
+    function SampleExpression1() {
+	
+	}
+	SampleExpression1.prototype = new priest.Expression()
+	i18n.enableExpression(SampleExpression1)
+
+	SampleExpression1.prototype.execute = function() {
+		this.setResult(this.getI18nText('sampleModule1.ErrorMsgExpression',{number:422}))
+	}
+
+You just need to pass the expression class your expression can now call `getI18nText` using the key and the replacements.
+
+For a full example check [test at test/testFromModule](https://github.com/firebaseco/priest-i18n/tree/master/test/testFromModule).
 
 ## Considerations
 
