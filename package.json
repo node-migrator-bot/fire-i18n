@@ -12,7 +12,7 @@
     },
     "bugs": {
 		"email": "firejs@firebase.co",
-        "web": "https://github.com/firejs/fire-i18n/issues"
+        "url": "https://github.com/firejs/fire-i18n/issues"
     },
     "keywords": ["firejs", "fire.js", "localization", "i18n", "internationalization", "localization","locale", "multi-language", "languages", "ignitable"],
     "repository": {
