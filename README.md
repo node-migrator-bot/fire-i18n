@@ -1,18 +1,18 @@
-#priest-i18n
+#fire-i18n
 
-Internationalization module for [priest.js](https://github.com/firebaseco/priest)
+Internationalization module for [fire.js](https://github.com/firejs/firejs)
 ***
 
 ## Installing
 
 ### using NPM
 
-    npm install priest-i18n
+    npm install fire-i18n
 
 ### using Github(unstable)
 In the root of your project run:
 
-    git clone git://github.com/firebaseco/priest-i18n.git node_modules/priest-i18n
+    git clone git://github.com/firejs/fire-i18n.git node_modules/fire-i18n
 
 ## Working with i18n
 
@@ -20,7 +20,7 @@ The language is set by a variable called "currentLocaleId". If not set, the defa
 
 ## @i18n
 
-Returns the string for the current locale. The hint is the key in the global dictionary. If the key can not be found, it will return a empty string. The input of the expression will be used as replacement of the tokens when the translation is retrieved.
+Returns the string for the current locale. The hint is the key in the global dictionary you want to retrieve. If the key can not be found, it will return a empty string. The input of the expression will be used as replacement of the tokens as the translation is retrieved.
 
 ### Example with key
 
@@ -63,19 +63,19 @@ When you use `i18n` with an input:
 
 It will return "Channel 'News' is not available"
 
-## Implementing i18n resources for a priest.js application
+## Implementing i18n resources for a fire.js application
 
 i18n module will try to load all the .i18n.json files from the i18n in the root of the application.
 
 Example:
 
-If you have a program in the following path `./MyApp.priest.json` i18n will try load all the `i18n.json` files from `./i18n/`.
+If you have a program in the following path `./MyApp.fjson` i18n will try load all the `i18n.<lang>.json` files from `./i18n/`.
 
 ## Implementing i18n resources in a custom module
 
 Implementing i18n resources in a module works the same way than applications, except for a simple call you have to make in your main script:
 
-    require('i18n').enableModule(module)
+    require('fire-i18n').enableModule(module)
 
 **Note:** You must pass `module` and not `exports` or `module.exports`.
 
@@ -91,25 +91,25 @@ Custom expressions written in Javascript can also take advantage of i18n by call
 
 Example:
 
-    var i18n = require('priest-i18n')
-	var priest = require('priest')
+    var i18n = require('fire-i18n')
+	var fire = require('fire')
     function SampleExpression1() {
 	
 	}
-	SampleExpression1.prototype = new priest.Expression()
+	SampleExpression1.prototype = new fire.Expression()
 	i18n.enableExpression(SampleExpression1)
 
 	SampleExpression1.prototype.execute = function() {
 		this.setResult(this.getI18nText('sampleModule1.ErrorMsgExpression',{number:422}))
 	}
 
-You just need to pass the expression class your expression can now call `getI18nText` using the key and the replacements.
+You just need to pass the expression class and you should be able to use  `getI18nText` using a key and replacements object.
 
-For a full example check [test at test/testFromModule](https://github.com/firebaseco/priest-i18n/tree/master/test/testFromModule).
+For a full example check [test at test/testFromModule](https://github.com/firejs/fire-i18n/tree/master/test/testFromModule).
 
 ## Considerations
 
-priest-i18n uses the standard key discovery strategy:
+fire-i18n uses the standard key discovery strategy:
 
 * If the locale id specifies the region(e.g "en-us"), it will look for the language and region. If the key can not be found, it will look for the key using the language only(e.g "en").
 * If the locale id only specifies the language(e.g "en"), it will look for the language key only.
@@ -121,22 +121,11 @@ When you set the locale id using the variable `currentLocaleId` remember that th
 
 ## Cloning the Repository
 
-    git clone git://github.com/firebaseco/priest-i18n.git
+    git clone git://github.com/firejs/fire-i18n.git
 
-
-### Preparing your Development Environment and running the Tests
-
-priest depends on [vows](http://vowsjs.org/) and other development tools, you can install all of them by simply running:
-
-     make install-dev-dependencies
-
-Once it's finished then you can run the tests:
+### Tests
 
     make run-tests
-
-There is also:
-
-    make remove-dev-dependencies
 
 ### Collaborating
 

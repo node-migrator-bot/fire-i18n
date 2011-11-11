@@ -1,25 +1,29 @@
 {
-    "name": "priest-i18n",
-    "description": "Localization expressions for priest.js",
-    "version": "1.0.0",
+    "name": "fire-i18n",
+    "description": "Localization expressions for fire.js",
+    "version": "0.1.0",
     "author": "Johan Hernandez <johan@firebase.co>",
-    "main": "index",
+    "main": "./index.js",
     "repository":
     {
         "type": "git"
         ,
-        "url": "http://github.com/firebaseco/priest-i18n.git"
+        "url": "http://github.com/firejs/fire-i18n.git"
     },
     "bugs": {
-        "web": "https://github.com/firebaseco/priest-i18n/issues"
+		"email": "firejs@firebase.co",
+        "web": "https://github.com/firejs/fire-i18n/issues"
     },
-    "keywords": ["priest", "priest.js", "localization", "i18n", "internationalization", "localization","locale", "multi-language", "languages"],
-    "repository": "git://github.com/firebaseco/priest-i18n",
+    "keywords": ["firejs", "fire.js", "localization", "i18n", "internationalization", "localization","locale", "multi-language", "languages", "ignitable"],
+    "repository": {
+		"type": "git",
+		"url": "git://github.com/firejs/fire-i18n"
+	},
     "devDependencies": {
-        "vows": ">= 0.5.11"
+        "vows": ">= 0.5.11",
+		"fire": ">= 0.1.0"
     },
     "engines": {
-        "node": ">= 0.1.98",
-		"priest": ">= 1.0.0"
+        "node": ">= 0.1.98"
     }
 }
