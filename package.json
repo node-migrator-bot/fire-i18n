@@ -2,28 +2,36 @@
     "name": "fire-i18n",
     "description": "Localization expressions for fire.js",
     "version": "0.1.0",
-    "author": "Johan Hernandez <johan@firebase.co>",
+	"homepage": "http://firejs.firebase.co",
+    "author": "Firebase.co <npm@firebase.co> (http://www.firebase.co)",
     "main": "./index.js",
     "repository":
     {
-        "type": "git"
-        ,
-        "url": "http://github.com/firejs/fire-i18n.git"
+        "type": "git",
+        "url": "https://github.com/firejs/fire-i18n.git"
     },
     "bugs": {
 		"email": "firejs@firebase.co",
         "url": "https://github.com/firejs/fire-i18n/issues"
     },
     "keywords": ["firejs", "fire.js", "localization", "i18n", "internationalization", "localization","locale", "multi-language", "languages", "ignitable"],
-    "repository": {
-		"type": "git",
-		"url": "git://github.com/firejs/fire-i18n"
-	},
-    "devDependencies": {
-        "vows": ">= 0.5.11",
+	"contributors"  : [{ "name": "Johan Hernandez", "email": "johan@firebase.co" }],
+	"dependencies": {
 		"fire": ">= 0.1.0"
     },
+    "devDependencies": {
+        "vows": ">= 0.5.11"
+    },
+	"scripts": {
+		"test": "make"
+	},
     "engines": {
         "node": ">= 0.1.98"
-    }
+    },
+	"licenses" : [
+		{
+			"type" : "MIT", 
+			"url" : "https://github.com/firejs/fire-i18n/blob/master/LICENSE"
+		}
+	]
 }
