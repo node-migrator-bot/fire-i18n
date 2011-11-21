@@ -5,3 +5,6 @@ run-tests:
 
 run-tests-spec:
 	node_modules/.bin/vows test/test.js --spe 
+
+travis:
+	sh .travis.sh

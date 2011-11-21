@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - 0.4
+  - 0.5
+  - 0.6
+env:
+  - FIRE_DEPS=master
+  - FIRE_DEPS=npm
+  - FIRE_DEPS=v0.1.0
+script: "make travis"
