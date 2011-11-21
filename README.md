@@ -1,4 +1,5 @@
 #fire-i18n
+[![Build Status](https://secure.travis-ci.org/firejs/fire-i18n.png)](http://travis-ci.org/firejs/fire-i18n)
 
 Internationalization module for [fire.js](https://github.com/firejs/firejs)
 ***

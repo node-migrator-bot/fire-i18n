@@ -7,4 +7,5 @@ env:
   - FIRE_BUILD=fire-i18n FIRE_DEPS=master
   - FIRE_BUILD=fire-i18n FIRE_DEPS=npm
   - FIRE_BUILD=fire-i18n FIRE_DEPS=v0.1.0
-install: "make travis"
+install: "bash .travis.sh"
+script: "make travis
