@@ -26,7 +26,7 @@
 		"test": "make"
 	},
     "engines": {
-        "node": ">= 0.1.98"
+        "node": ">= 0.4.5"
     },
 	"licenses" : [
 		{
