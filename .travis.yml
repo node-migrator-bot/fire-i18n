@@ -7,4 +7,4 @@ env:
   - FIRE_DEPS=master
   - FIRE_DEPS=npm
   - FIRE_DEPS=v0.1.0
-script: "make travis"
+install: "make travis"
